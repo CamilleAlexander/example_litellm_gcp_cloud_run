@@ -11,4 +11,4 @@ COPY litellm_config.yaml .
 # Expose the necessary port
 EXPOSE 8080/tcp
 
-CMD ["--port", "8080", "--config", "litellm_config.yaml"]
+CMD ["litellm", "--port", "8080", "--config", "litellm_config.yaml"]
