@@ -2,10 +2,9 @@
 FROM ghcr.io/berriai/litellm:main-latest
 
 WORKDIR /app
-
 COPY litellm_config.yaml .
 
 EXPOSE 8080
 
-ENTRYPOINT ["litellm"]
-CMD ["--port", "8080", "--config", "litellm_config.yaml"]
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["echo Starting LiteLLM... && litellm --port 8080 --config litellm_config.yaml"]
