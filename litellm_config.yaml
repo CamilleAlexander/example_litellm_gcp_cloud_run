@@ -6,13 +6,12 @@ model_list:
     litellm_params:
       model: claude-3-5-haiku@20241022
       api_base: https://us-central1-aiplatform.googleapis.com/v1
-      api_key: ${VERTEX_API_KEY}  # or hardcode the key if testing
       api_version: v1
+
   - model_name: vertex-llama
     litellm_params:
       model: llama-4-scout-17b-16e-instruct-maas
       api_base: https://us-central1-aiplatform.googleapis.com/v1
-      api_key: ${VERTEX_API_KEY}
       api_version: v1
 
 litellm_settings:
@@ -20,3 +19,4 @@ litellm_settings:
   success_callback: ["prometheus"]
   failure_callback: ["prometheus"]
   service_callback: ["prometheus_system"]
+
