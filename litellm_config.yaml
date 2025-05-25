@@ -2,13 +2,18 @@ general_settings:
   database_connection_pool_limit: 20
 
 model_list:
-  - model_name: "claude-3-5-haiku"
+  - model_name: vertex-claude
     litellm_params:
-      model: "claude-3-5-haiku@20241022"
-
-  - model_name: "llama-4-scout"
+      model: claude-3-5-haiku@20241022
+      api_base: https://us-central1-aiplatform.googleapis.com/v1
+      api_key: ${VERTEX_API_KEY}  # or hardcode the key if testing
+      api_version: v1
+  - model_name: vertex-llama
     litellm_params:
-      model: "llama-4-scout-17b-16e-instruct-maas"
+      model: llama-4-scout-17b-16e-instruct-maas
+      api_base: https://us-central1-aiplatform.googleapis.com/v1
+      api_key: ${VERTEX_API_KEY}
+      api_version: v1
 
 litellm_settings:
   drop_params: true
