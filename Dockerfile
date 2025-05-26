@@ -5,12 +5,9 @@ WORKDIR /app
 
 COPY litellm_config.yaml .
 
-# Install litellm
-RUN pip install litellm
+# Install litellm with proxy dependencies
+RUN pip install 'litellm[proxy]'
 
 EXPOSE 8080
 
 CMD ["litellm", "--host", "0.0.0.0", "--port", "8080", "--config", "litellm_config.yaml"]
-
-
- 
