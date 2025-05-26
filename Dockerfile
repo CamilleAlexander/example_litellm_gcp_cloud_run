@@ -7,7 +7,7 @@ COPY litellm_config.yaml .
 
 RUN pip install --no-cache-dir litellm[proxy]
 
-EXPOSE 8080
+EXPOSE 4000
+CMD ["litellm", "--host", "0.0.0.0", "--port", "4000", "--config", "litellm_config.yaml"]
 
-CMD ["sh", "-c", "litellm --host 0.0.0.0 --port $PORT --config litellm_config.yaml"]
 
