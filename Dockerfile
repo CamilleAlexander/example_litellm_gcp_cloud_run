@@ -32,6 +32,6 @@ EXPOSE 8080
 #                  This is the port that Google Cloud Run expects your
 #                  application to be listening on.
 # - "--config litellm_config.yaml": Specifies the configuration file for LiteLLM.
-CMD ["litellm", "--host", "0.0.0.0", "--port", "8080", "--config", "litellm_config.yaml"]
+CMD ["litellm", "--host", "0.0.0.0", "--port", "8080", "--config", "litellm_config.yaml", "--debug"]
 
 
