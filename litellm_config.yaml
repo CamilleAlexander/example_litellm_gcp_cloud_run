@@ -7,16 +7,20 @@ model_list:
       model: claude-3-5-haiku@20241022
       api_base: https://us-central1-aiplatform.googleapis.com/v1
       api_version: v1
+      project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
+      region: us-west1 # <--- ADD THIS LINE
 
   - model_name: vertex-llama
     litellm_params:
       model: llama-4-scout-17b-16e-instruct-maas
       api_base: https://us-central1-aiplatform.googleapis.com/v1
       api_version: v1
+      project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
+      region: us-west1 # <--- ADD THIS LINE
 
 litellm_settings:
   drop_params: true
-  #success_callback: ["prometheus"]
-  #failure_callback: ["prometheus"]
-  #service_callback: ["prometheus_system"]
+  # success_callback: ["prometheus"]  # Keep these lines commented out for now
+  # failure_callback: ["prometheus"]
+  # service_callback: ["prometheus_system"]
 
