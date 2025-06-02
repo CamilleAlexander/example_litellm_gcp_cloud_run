@@ -5,18 +5,18 @@ model_list:
   - model_name: vertex-claude
     litellm_params:
       model: vertex_ai/claude-3-5-haiku@20241022
-      api_base: https://us-west1-aiplatform.googleapis.com/v1
+      api_base: https://us-east5-aiplatform.googleapis.com/v1
       api_version: v1
       project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
-      region: us-west1 # <--- ADD THIS LINE
+      region: us-east5 # <--- ADD THIS LINE
 
   - model_name: vertex-llama
     litellm_params:
       model: vertex_ai/llama-4-scout-17b-16e-instruct-maas
-      api_base: https://us-west1-aiplatform.googleapis.com/v1
+      api_base: https://us-east5-aiplatform.googleapis.com/v1
       api_version: v1
       project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
-      region: us-west1 # <--- ADD THIS LINE
+      region: us-east5 # <--- ADD THIS LINE
 
 litellm_settings:
   drop_params: true
