@@ -11,7 +11,8 @@ WORKDIR /app
 # !!! IMPORTANT: Ensure this litellm_config.yaml has the Prometheus callbacks
 # !!! commented out or removed, as discussed previously. This is crucial
 # !!! for LiteLLM to start successfully on Cloud Run.
-COPY litellm_config.yaml .
+COPY litellm_config.yaml /app/litellm_config.yaml
+
 
 # Install litellm with the '[proxy]' extras.
 # '--no-cache-dir' helps to reduce the final Docker image size by not storing
