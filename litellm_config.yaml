@@ -2,21 +2,17 @@ general_settings:
   database_connection_pool_limit: 20
 
 model_list:
-  - model_name: vertex-claude
+  - model_name: claude-haiku
+    litellm_provider: aimm
     litellm_params:
-      model: vertex_ai/claude-3-5-haiku@20241022
-      api_base: https://us-east5-aiplatform.googleapis.com/v1
-      api_version: v1
-      project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
-      region: us-east5 # <--- ADD THIS LINE
+      model: anthropic/claude-3.5-haiku
+      api_key: ${AIMM_API_KEY}
 
-  - model_name: vertex-llama
+  - model_name: llama-hf
+    litellm_provider: huggingface
     litellm_params:
-      model: vertex_ai/llama-4-scout-17b-16e-instruct-maas
-      api_base: https://us-east5-aiplatform.googleapis.com/v1
-      api_version: v1
-      project_id: lumie-nexus-bridge # <--- ADD THIS LINE (Replace with your actual Project ID)
-      region: us-east5 # <--- ADD THIS LINE
+      model: meta-llama/Llama-4-Maverick-17B-128E-Instruct
+      api_key: ${HF_API_KEY}
 
 litellm_settings:
   drop_params: true
