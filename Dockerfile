@@ -34,4 +34,5 @@ EXPOSE 8080
 #                  application to be listening on.
 # - "--config litellm_config.yaml": Specifies the configuration file for LiteLLM.
 # - "--debug": Enables verbose debugging output for LiteLLM.
-CMD ["litellm", "--host", "0.0.0.0", "--port", "8080", "--config", "litellm_config.yaml", "--debug"]
+CMD ["litellm", "--host", "0.0.0.0", "--port", "8080", "--config", "/app/litellm_config.yaml", "--debug"]
+
