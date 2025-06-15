@@ -7,10 +7,13 @@ model_list:
     litellm_params:
       model: anthropic/claude-3.5-haiku
       api_key: ${AIMM_API_KEY}
-      
+
+  - model_name: llama-scout
+    litellm_provider: vertex_ai
+    litellm_params:
+      model: publishers/meta/models/llama-4-scout-17b-16e-instruct-maas
+      project: lumie-nexus-bridge
+      location: us-central1
+
 litellm_settings:
   drop_params: true
-  # success_callback: ["prometheus"]  # Keep these lines commented out for now
-  # failure_callback: ["prometheus"]
-  # service_callback: ["prometheus_system"]
-
