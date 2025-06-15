@@ -7,13 +7,7 @@ model_list:
     litellm_params:
       model: anthropic/claude-3.5-haiku
       api_key: ${AIMM_API_KEY}
-
-  - model_name: llama-hf
-    litellm_provider: huggingface
-    litellm_params:
-      model: meta-llama/Llama-4-Maverick-17B-128E-Instruct
-      api_key: ${HF_API_KEY}
-
+      
 litellm_settings:
   drop_params: true
   # success_callback: ["prometheus"]  # Keep these lines commented out for now
