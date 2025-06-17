@@ -2,12 +2,16 @@ general_settings:
   database_connection_pool_limit: 20
 
 model_list:
-  - model_name: claude-haiku
-    litellm_provider: aiml
+  - model_name: aimlapi/claude/claude-3-5-haiku  # <- must match LibreChat
+    litellm_provider: aimlapi
     litellm_params:
       model: claude-3-5-haiku-20241022
       api_key: ${AI_ML_API_KEY}
+      api_base: https://api.aimlapi.com/v1
+      authorization_type: bearer
+    model_response_format: openai  # <- this is what fixes “no body”
 
 litellm_settings:
   drop_params: true
+
 
