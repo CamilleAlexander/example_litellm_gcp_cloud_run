@@ -5,7 +5,7 @@ model_list:
   - model_name: claude-haiku
     litellm_provider: aiml
     litellm_params:
-      model: anthropic/claude-3.5-haiku
+      model: claude-3-5-haiku-20241022
       api_key: ${AI_ML_API_KEY}
 
 litellm_settings:
